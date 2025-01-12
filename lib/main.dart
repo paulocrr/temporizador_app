@@ -18,6 +18,20 @@ class MainApp extends StatelessWidget {
           titleTextStyle: TextStyle(fontSize: 28, color: Colors.black),
           centerTitle: false,
         ),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.black,
+            foregroundColor: Colors.white,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(16),
+            ),
+          ),
+        ),
+        sliderTheme: SliderThemeData(
+          thumbColor: Colors.black,
+          activeTrackColor: Colors.black,
+          inactiveTrackColor: Colors.red,
+        ),
       ),
       home: PaginaGeneral(),
     );
