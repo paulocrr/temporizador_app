@@ -23,8 +23,6 @@ class SelectorDeTiempo extends StatelessWidget {
                   builder: (_) {
                     return EscogerMinutos(
                       seleccionDeTiempo: (tiempoSeleccionado) {
-                        print(
-                            'Se llamo selector de tiempo ${tiempoSeleccionado.toInt()}');
                         iniciarTiempo(tiempoSeleccionado);
                       },
                     );

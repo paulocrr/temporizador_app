@@ -31,7 +31,6 @@ class _EscogerMinutosState extends State<EscogerMinutos> {
           ),
           ElevatedButton(
             onPressed: () {
-              print('Se llamo escoger minutos ${minutosActuales.toInt()}');
               widget.seleccionDeTiempo(minutosActuales.toInt());
               Navigator.pop(context);
             },

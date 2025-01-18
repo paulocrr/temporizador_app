@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 class ContadorDeTiempo extends StatelessWidget {
   final int segundosActuales;
   final int segundosSeleccionados;
+  final VoidCallback volverAIniciar;
   const ContadorDeTiempo({
     required this.segundosActuales,
     required this.segundosSeleccionados,
+    required this.volverAIniciar,
     super.key,
   });
 
@@ -40,7 +42,12 @@ class ContadorDeTiempo extends StatelessWidget {
             Text(
               '$minutos:$segundosConFormato',
               style: TextStyle(fontSize: 32),
-            )
+            ),
+            if (segundosActuales == 0)
+              ElevatedButton(
+                onPressed: volverAIniciar,
+                child: Text('Volver al inicio'),
+              ),
           ],
         ),
       ),
